@@ -1,0 +1,174 @@
+* {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 23px;
+    font-weight: 100;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(173, 216, 230, 0.5); /* Light blue color with 50% opacity */
+    color: #000; /* Text color for contrast */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 23px;
+    font-weight: 100;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+.flex-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+    height: 100vh;           /* Full viewport height */
+}
+
+.row {
+    display: flex;
+    width: auto;               /* Adjust width as needed */
+}
+
+.column {
+    width: 500px;             /* Fixed width for columns */
+    padding: 30px;
+    height: 500px;            /* Fixed height for columns */
+    box-sizing: border-box;  /* Include padding in width/height */ 
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3), /* First shadow (light) */
+                0px 16px 32px rgba(0, 0, 0, 0.2); /* Second shadow (darker) */
+}
+
+.column:nth-child(1) {
+    background-color: rgb(255, 255, 255);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.column:nth-child(2) {
+    background-color: rgb(18, 179, 228);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .row {
+        flex-direction: column;
+        align-items: center; /* Center columns horizontally when stacked */
+    }
+    .column {
+        width: 90%; /* Adjust width for smaller screens */
+        max-width: 500px; /* Limit maximum width */
+    }
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Light background with some transparency */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* 3D shadow effect */
+    border-radius: 10px;
+    max-width: 500px;
+    max-height: 350px;
+    margin: auto;
+}
+
+.input-field input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid rgba(0, 0, 0, 0.2); /* Light border */
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent input fields */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* 3D effect for input fields */
+    backdrop-filter: blur(5px); /* Optional: adds a blur effect for a glass-like look */
+    color: #333; /* Text color */
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.input-field input:focus {
+    border-color: rgba(0, 123, 255, 0.6); /* Blue border on focus */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Stronger 3D effect on focus */
+    outline: none; /* Remove default outline */
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+}
+
+.login-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.btn-log button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* 3D effect for button */
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.btn-log button:hover {
+    background-color: #0056b3;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none; /* Remove underline */
+    font-size: 17px; /* Adjust the font size to make it smaller */
+    text-transform: none; /* Keep the text as normal (no uppercase transformation) */
+}
+
+a:hover {
+    text-decoration: none; /* Ensure no underline on hover */
+    color: #0056b3; /* Optional: change color on hover */
+}
+
+.column h3 {
+    font-size: 28px; /* Adjust the font size to make it larger */
+    color: #333; /* Set the color of the text (dark gray) */
+    font-weight: bold; /* Make the text bold */
+    text-align: center; /* Center the heading */
+    margin-bottom: 20px; /* Add space below the heading */
+    text-transform: uppercase; /* Make the text uppercase for emphasis */
+    letter-spacing: 2px; /* Add some spacing between letters */
+}
+
+.image-column {
+    background-image: url('Resources/log.jpg'); /* Replace with the actual path to your image */
+    background-size: cover; /* Makes the background cover the entire column */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Ensure the image doesn't repeat */
+    height: 100%; /* Ensure the height of the column adjusts with content */
+    width: 100%; /* Ensure the width of the column is fully utilized */
+    border-radius: 5px; /* Optional: Add rounded corners if needed */
+}
+
+.social-icons {
+    display: flex; /* Display the anchor tags in a row */
+    justify-content: center; /* Center the icons horizontally */
+    gap: 10px; /* Add some space between the icons */
+    margin-top: 20px; /* Add margin to position the icons */
+}
+
+.social-icons a img {
+    width: 50px; /* Set the width of the icons */
+    height: 50px; /* Set the height of the icons */
+    transition: transform 0.3s ease; /* Add a smooth hover effect */
+}
+
+.social-icons a img:hover {
+    transform: scale(1.2); /* Slightly enlarge the icon on hover */
+}
