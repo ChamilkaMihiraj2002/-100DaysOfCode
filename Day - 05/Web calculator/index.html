@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./main.css" >
+</head>
+<body>
+    <div class="container calculator bg-light">
+        <div class="row">
+            <div class="col-12">
+                <div id="dispaly" class="display"></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <button class="btn btn-clear w-100 " id="clear_btn" value="C" onclick="cl_button()">C</button>
+            </div>
+            <div class="col-3">
+                <button class="btn btn-operator w-100" id="precentage_btn" onclick="precentage()">%</button>
+            </div>
+            <div class="col-3">
+                <button class="btn btn-operator w-100" onclick="select_op('/')">/</button>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-3">
+                <button class="btn btn-light w-100 " onclick="btn_get('7')">7</button>
+            </div>
+            <div class="col-3">
+                <button class="btn btn-light w-100" onclick="btn_get('8')">8</button>
+            </div>
+            <div class="col-3">
+                <button class="btn btn-light w-100" onclick="btn_get('9')">9</button>
+            </div>
+            <div class="col-3">
+                <button class="btn btn-operator w-100"  onclick="select_op('x')">X</button>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-3">
+                <button class="btn btn-light w-100" onclick="btn_get('4')">4</button>
+            </div>
+            <div class="col-3">
+                <button class="btn btn-light w-100" onclick="btn_get('5')">5</button>
+            </div>
+            <div class="col-3">
+                <button class="btn btn-light w-100" onclick="btn_get('6')">6</button>
+            </div>
+            <div class="col-3">
+                <button class="btn btn-operator w-100" onclick="select_op('-')">-</button>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-3">
+                <button class="btn btn-light w-100" onclick="btn_get('1')">1</button>
+            </div>
+            <div class="col-3">
+                <button class="btn btn-light w-100" onclick="btn_get('2')">2</button>
+            </div>
+            <div class="col-3">
+                <button class="btn btn-light w-100" onclick="btn_get('3')">3</button>
+            </div>
+            <div class="col-3">
+                <button class="btn btn-operator w-100"  onclick="select_op('+')">+</button>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-6">
+                <button class="btn btn-light w-100" onclick="btn_get('0')">0</button>
+            </div>
+            <div class="col-3">
+                <button class="btn btn-light w-100" id="." onclick="decimal()">.</button>
+            </div>
+            <div class="col-3">
+                <button class="btn btn-operator w-100" id="equal_btn" value="=" onclick="eq_button()">=</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="./Script.js"></script>
+</body>
+</html>
