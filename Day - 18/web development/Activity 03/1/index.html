@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculate multiplication and division</title>
+    <style>
+        .containner {
+            margin: 5px;
+            font-family:'Times New Roman', Times, serif;
+            font-size: 20px;
+        }
+
+        .sub-containner {
+            margin: 2px;
+            padding: 3px;
+        }
+
+        button:hover {
+            border: 3px solid lightblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="containner">
+        <div class="sub-containner">
+            <label for="num1">1st Number :</label>
+            <input type="text" id="num1" name="num1"> 
+        </div>
+
+        <div class="sub-containner">
+            <label for="num2">2nd Number :</label>
+            <input type="text" id="num2" name="num2"> 
+        </div>
+
+        <div class="sub-containner">
+            <button onclick="multiply()">Multiply</button>
+            <button onclick="divide()">Divide</button>
+        </div>
+
+        <div class="sub-containner">
+            <p>The Result is :</p>
+            <p id="answer"></p>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>

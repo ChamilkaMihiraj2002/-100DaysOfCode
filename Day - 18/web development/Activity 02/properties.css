@@ -1,0 +1,32 @@
+* {
+    background-color: lightsteelblue;
+}
+
+h1 {
+    font-family: serif;
+    color: darkblue;
+    text-transform: uppercase;
+}
+
+img {
+    width: 150px;
+    height: 200px;
+}
+
+.headings {
+    font-family: serif;
+    color: darkgreen;
+    text-decoration: underline;
+}
+
+#paragraph {
+    font-family: serif;
+    color: black;
+    font-size: 20px;
+}
+
+#lists-contenner {
+    font-family: serif;
+    color: darkmagenta;
+    font-size: 16px;
+}
