@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+}
+
+.h1-main, .h1-slidebar {
+    width: 300px; 
+}
+
+.h1-main {
+    background-color: coral;
+}
+
+.h1-slidebar {
+    background-color: plum;
+}
