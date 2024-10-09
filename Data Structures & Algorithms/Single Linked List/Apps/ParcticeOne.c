@@ -26,10 +26,11 @@ int main() {
     }
 
     display();
+    countNode();
 
     insertBegin();
-    
     display();
+    countNode();
     
     return 0;
 }
@@ -75,7 +76,14 @@ void insertEnd() {
 }
 
 void countNode() {
-    
+    struct node * ptr = head;
+    int count = 0;
+    while (ptr != NULL)
+    {
+        ptr = ptr->link;
+        count++;
+    }
+    printf("Node Count is :: %d\n", count);
 }
 
 int InputInt() {
