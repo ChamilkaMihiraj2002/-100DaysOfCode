@@ -12,6 +12,7 @@ void display();
 void insertBegin();
 void insertEnd();
 void deleteFistNode();
+void deleteLastNode();
 void countNode();
 
 
@@ -27,13 +28,16 @@ int main() {
         insertEnd();
     }
 
+    printf("\nAfter inserting end :: \n");
     display();
     countNode();
 
+    printf("\nAfter inserting begin :: \n");
     insertBegin();
     display();
     countNode();
 
+    printf("\nAfter delete first node :: \n");
     deleteFistNode();
     display();
     countNode();
@@ -101,6 +105,10 @@ void deleteFistNode() {
         head = head->link;
         free(ptr);
     }   
+}
+
+void deleteLastNode() {
+    
 }
 
 int InputInt() {
