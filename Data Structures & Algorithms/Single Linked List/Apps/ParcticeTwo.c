@@ -11,7 +11,9 @@ struct node * head;
 void display();
 void insertBegin();
 void insertEnd();
+void deleteFistNode();
 void countNode();
+
 
 int InputInt();
 
@@ -29,6 +31,10 @@ int main() {
     countNode();
 
     insertBegin();
+    display();
+    countNode();
+
+    deleteFistNode();
     display();
     countNode();
     
@@ -84,6 +90,17 @@ void countNode() {
         count++;
     }
     printf("Node Count is :: %d\n", count);
+}
+
+void deleteFistNode() {
+    if (head == NULL)
+    {
+        printf("Linked List is empty!!");
+    } else {
+        struct node * ptr = head;
+        head = head->link;
+        free(ptr);
+    }   
 }
 
 int InputInt() {

@@ -57,7 +57,7 @@ void count_of_node(struct node * head) {
 void display(struct node * head) {
     if (head == NULL){  printf("Linked list is Empty!!\n"); }
 
-    // Craete a pointer
+    // Create a pointer
     struct node * ptr = head;
 
     while (ptr != NULL)
