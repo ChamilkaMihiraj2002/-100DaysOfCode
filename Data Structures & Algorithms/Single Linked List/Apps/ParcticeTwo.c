@@ -19,10 +19,6 @@ void countNode();
 int InputInt();
 
 int main() {
-    head = (struct node *) malloc (sizeof(struct node));
-    head->data = 5;
-    head->link = NULL;
-
     for (int i = 0; i < 5; i++)
     {
         insertEnd();
@@ -39,6 +35,11 @@ int main() {
 
     printf("\nAfter delete first node :: \n");
     deleteFistNode();
+    display();
+    countNode();
+
+    printf("\nAfter delete last node :: \n");
+    deleteLastNode();
     display();
     countNode();
     
@@ -108,7 +109,22 @@ void deleteFistNode() {
 }
 
 void deleteLastNode() {
-    
+    if (head == NULL)
+    {
+        printf("Linked List is empty!!!");
+    } else if (head->link == NULL) {
+        free(head);
+        head = NULL;
+    } else {
+        struct node * ptr = head;
+
+        while (ptr->link->link != NULL)
+        {
+            ptr = ptr->link;
+        }
+        free(ptr->link);
+        ptr->link = NULL;
+    }
 }
 
 int InputInt() {
