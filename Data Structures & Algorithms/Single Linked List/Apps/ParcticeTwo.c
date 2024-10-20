@@ -13,6 +13,7 @@ void insertBegin();
 void insertEnd();
 void deleteFistNode();
 void deleteLastNode();
+void add_at_position();
 void countNode();
 
 
@@ -40,6 +41,11 @@ int main() {
 
     printf("\nAfter delete last node :: \n");
     deleteLastNode();
+    display();
+    countNode();
+
+    printf("\nAdd node :: \n");
+    add_at_position();
     display();
     countNode();
     
@@ -124,6 +130,37 @@ void deleteLastNode() {
         }
         free(ptr->link);
         ptr->link = NULL;
+    }
+}
+
+void add_at_position() {
+    int position = InputInt(), value = InputInt();
+    if (head == NULL)
+    {
+        printf("Linked List is empty!!!");
+    } else if (position == 1) {
+        struct node * ptr = (struct node *) malloc (sizeof(struct node));
+        ptr->data = value;
+        ptr->link = NULL;
+
+        ptr->link = head;
+        head = ptr;
+    } else {
+        struct node * ptr = head;
+        struct node * present = (struct node *) malloc (sizeof(struct node));
+
+        present->data = value;
+        present->link = NULL;
+
+        position--;
+        while (position != 1)
+        {
+            ptr = ptr->link;
+            position--;
+        }
+        
+        present->link = ptr->link;
+        ptr->link = present;
     }
 }
 
